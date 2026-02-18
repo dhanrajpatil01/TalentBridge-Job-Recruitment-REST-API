@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: CareerLaunch
+
+  data:
+    mongodb:
+      uri:  ${DATASOURCE_URL}
+      database: CareerLaunch
+
+app:
+  jwt:
+    # This MUST be kept secret.
+    # Generate a secure 64-byte, Base64-encoded secret.
+    secret: ${JWT_SECRET}
+
+    # Token expiration time in milliseconds (86400000 = 24 hours)
+    expiration-ms: ${JWT_EXPIRATION}
